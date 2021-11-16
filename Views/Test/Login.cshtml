@@ -1,0 +1,39 @@
+﻿@model TheSecret.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>View</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="View">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label"></label>
+                <input asp-for="UserID" class="form-control" />
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" asp-action="Login" />
+                @*<input type="button" value="Signup" class="btn btn-primary" asp-action="Signup" />*@
+                <a href="/Test/Signup" class="btn btn-primary">Signup</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<button type="submit" value="Login" />
+
+
+@{
+}
